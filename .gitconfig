@@ -1,0 +1,4 @@
+[push]
+	default = simple
+[alias]
+	lg = log --all --graph --decorate --tags
