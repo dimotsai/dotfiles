@@ -7,8 +7,6 @@
 
 ## Installation
 ```
-git clone https://github.com/dimotsai/dotfiles
-cd dotfiles
-sh bootstrap.sh
+git clone https://github.com/dimotsai/dotfiles && sh dotfiles/bootstrap.sh
 ```
 
