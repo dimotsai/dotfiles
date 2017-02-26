@@ -1,4 +1,8 @@
+BASEPATH=`dirname $0`
+
 git pull origin master
+
+pushd $BASEPATH
 
 # copy dotfiles
 cp -n .tmux.conf \
@@ -6,6 +10,8 @@ cp -n .tmux.conf \
   .gitconfig \
   .npmrc \
   .zshrc ${HOME}
+
+popd
 
 # install oh-my-zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ${HOME}/.oh-my-zsh
