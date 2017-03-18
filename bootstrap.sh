@@ -34,4 +34,4 @@ echo 'You are good to go now! :)'
 
 popd
 
-chsh -s /bin/zsh
+chsh -s $(which zsh)
