@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-BASEDIR=`dirname $0`
+BASEDIR=$(dirname $0)
+
+DIR_OH_MY_ZSH=${HOME}/.oh-my-zsh
+DIR_TPM=${HOME}/.tmux/plugins/tpm
 
 pushd $BASEDIR
 
@@ -15,10 +18,18 @@ cp -n .tmux.conf \
 
 
 # install oh-my-zsh
-git clone https://github.com/robbyrussell/oh-my-zsh.git ${HOME}/.oh-my-zsh
+if [ -d ${DIR_OH_MY_ZSH}/.git ]; then
+  git -C ${DIR_OH_MY_ZSH} pull
+else
+  git clone https://github.com/robbyrussell/oh-my-zsh.git ${DIR_OH_MY_ZSH}
+fi
 
-# install tmux-themepack
-git clone https://github.com/jimeh/tmux-themepack.git ${HOME}/.tmux-themepack
+# install tpm
+if [ -d ${DIR_TPM}/.git ]; then
+  git -C ${DIR_TPM} pull
+else
+  git clone https://github.com/tmux-plugins/tpm ${DIR_TPM}
+fi
 
 # install spf13-vim
 curl https://j.mp/spf13-vim3 -L -o - | sh
