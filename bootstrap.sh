@@ -11,7 +11,6 @@ git pull origin master
 
 # copy dotfiles
 cp -n .tmux.conf \
-  .vimrc.local \
   .gitconfig \
   .npmrc \
   .zshrc ${HOME}
@@ -31,8 +30,8 @@ else
   git clone https://github.com/tmux-plugins/tpm ${DIR_TPM}
 fi
 
-# install spf13-vim
-curl https://j.mp/spf13-vim3 -L -o - | sh
+# install space-vim
+bash <(curl -fsSL https://raw.githubusercontent.com/liuchengxu/space-vim/master/install.sh)
 
 # setup git
 read -p "git username: " GIT_USERNAME

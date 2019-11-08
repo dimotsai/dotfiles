@@ -1,4 +1,5 @@
 [push]
-	default = simple
+  default = simple
 [alias]
-	lg = log --all --graph --decorate --tags
+  lg = log --all --graph --decorate --tags
+  st = status
