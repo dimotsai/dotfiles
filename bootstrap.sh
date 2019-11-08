@@ -5,7 +5,7 @@ BASEDIR=$(dirname $0)
 DIR_OH_MY_ZSH=${HOME}/.oh-my-zsh
 DIR_TPM=${HOME}/.tmux/plugins/tpm
 
-pushd $BASEDIR
+pushd $BASEDIR > /dev/null
 
 git pull origin master
 
@@ -42,6 +42,6 @@ git config --global user.email "${GIT_EMAIL}"
 # done
 echo 'You are good to go now! :)'
 
-popd
+popd > /dev/null
 
 chsh -s $(which zsh)
