@@ -2,7 +2,7 @@
 
 ## Features
 * oh-my-zsh
-* spf13-vim
+* space-vim
 * tmux-themepack
 
 ## Installation
