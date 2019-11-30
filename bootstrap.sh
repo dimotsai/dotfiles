@@ -29,6 +29,7 @@ if [ -d ${DIR_TPM}/.git ]; then
 else
   git clone https://github.com/tmux-plugins/tpm ${DIR_TPM}
 fi
+${DIR_TPM}/bin/install_plugins
 
 # install space-vim
 bash <(curl -fsSL https://raw.githubusercontent.com/liuchengxu/space-vim/master/install.sh)
